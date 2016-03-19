@@ -3,6 +3,7 @@ import java.util.ArrayList;
 class TestAddBigInteger {
 	public static void main(String[] args) {
 		int l;
+		//creat a scanner
 		Scanner input = new Scanner(System.in);
 		AddBigInteger A = new AddBigInteger();
 		String a;

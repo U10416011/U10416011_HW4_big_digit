@@ -28,10 +28,8 @@ class AddBigInteger {
 	    	l = x.size()-1;
 	    }
 	    
-	    for(i = 0; i <= l; i++) {
+	    for(i = 0; i <= l; i++) {//sum of two big int 
 	    	w = x.get(i) + y.get(i) + c;
-	    	//System.out.println(x.get(i));
-	    	//System.out.println(y.get(i));
 	        if(w < 10) {
 	            c = 0;
 	        } else {
@@ -43,7 +41,7 @@ class AddBigInteger {
 	    if(c == 1) {
 			z.add(1);
 		}
-	     return z;
+	    return z;
 	}
 }
 	
