@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 class AddBigInteger {
 	
@@ -13,7 +13,37 @@ class AddBigInteger {
 		}
 		int i, c = 0,w,l,k;
 	    ArrayList<Integer> z = new ArrayList();
-		return z;
+	    if(x.size() < y.size()){//let two arraylist to the same size
+	    	k = y.size() - x.size();
+	    	for(int q = 0; q < k; q++){
+		    	x.add(0);
+		    }
+	    	l = y.size()-1;
+	    }
+	    else {
+	    	k = x.size() - y.size();
+	    	for(int q = 0; q < k; q++){
+		    	y.add(0);
+		    }
+	    	l = x.size()-1;
+	    }
+	    
+	    for(i = 0; i <= l; i++) {
+	    	w = x.get(i) + y.get(i) + c;
+	    	//System.out.println(x.get(i));
+	    	//System.out.println(y.get(i));
+	        if(w < 10) {
+	            c = 0;
+	        } else {
+	            w = w - 10;
+	            c = 1;
+	        }
+	        z.add(w);       
+	    }
+	    if(c == 1) {
+			z.add(1);
+		}
+	     return z;
 	}
 }
 	
